@@ -1,0 +1,16 @@
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    color: #757575;
+}
+button {
+    cursor: pointer;
+}
+.logo {
+    color: #000000;
+}
+.brand-color {
+    color: #2196F3;
+}
+.nav-list {
+    list-style: none;
+}
