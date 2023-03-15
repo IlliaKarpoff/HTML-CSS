@@ -1,16 +1,99 @@
 body {
     font-family: 'Roboto', 'Arial', sans-serif;
     color: #757575;
+    width: 1600px;
 }
 button {
     cursor: pointer;
 }
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+}
 .logo {
     color: #000000;
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
 }
 .brand-color {
     color: #2196F3;
 }
+
 .nav-list {
     list-style: none;
+    display: flex;
+}
+.nav-list-item {
+    margin-right: 20px;
+}
+.nav-list-item a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #212121;
+}
+.nav-list-item a:hover,
+.nav-list-item a:focus {
+    color: #2196F3;
+}
+.header-contacts {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #757575;
+    margin-right: 20px;
+}
+.header-contacts:hover,
+.header-contacts:focus {
+    color: #2196F3;
+}
+.top {
+    width: 1600px;
+    height: 600px;
+    background: #2F303A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+justify-content: center;
+}
+h1 {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-bottom: 20px;
+font-weight: 900;
+font-size: 44px;
+line-height: 1.36;
+text-align: center;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+.buy-service {
+    min-width: 200px;
+height: 50px;
+background: #2196F3;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+cursor: pointer;
+padding: 20px;
+
+font-weight: 700;
+font-size: 16px;
+line-height: 1.88;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.06em;
+color: #FFFFFF;
 }
