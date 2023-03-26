@@ -103,6 +103,11 @@ h1 {
   letter-spacing: 0.06em;
   color: #ffffff;
 }
+.buy-service-button:hover,
+.buy-service-button:focus {
+  /* background: #ffffff;  */
+  color: #000000;
+}
 
 /* FEATURES SECTION */
 .vissualy-hidden{
