@@ -105,8 +105,8 @@ h1 {
 }
 .buy-service-button:hover,
 .buy-service-button:focus {
-  /* background: #ffffff;  */
-  color: #000000;
+  background: #ffffff; 
+  color: #2196f3;
 }
 
 /* FEATURES SECTION */
