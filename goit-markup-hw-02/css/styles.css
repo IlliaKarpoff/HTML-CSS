@@ -59,7 +59,7 @@ button {
 }
 
 /* SECTION TOP */
-.section{
+.section {
     text-align: center;
     width: 1200px;
 }
@@ -187,3 +187,27 @@ padding: 80px;
 }
 
 /* PORTFOLIO */
+.filter-list {
+  list-style: none;
+  display: flex;
+  margin: 0 auto;
+}
+.filter-item {
+  margin-right: 8px;
+}
+.filter-button {
+  height: 38px;
+border-radius: 5px;
+padding: 6px 22px;
+font-weight: 500;
+line-height: 26px;
+letter-spacing: 0.03em;
+text-align: center;
+border: none;
+}
+.filter-button:hover,
+.filter-button:focus {
+  color: #ffffff;
+  background-color: #2196F3;
+  cursor: pointer;
+}
