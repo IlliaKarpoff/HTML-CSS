@@ -322,6 +322,11 @@ h1 {
   border: 1px solid #aaaaaa;
   border-radius: 50%;
   position: fixed;
-  bottom: 100px;
-  right: 100px;
+  bottom: 50px;
+  left: 1450px;
+}
+.button-up-fixed:hover {
+  color: #000000;
+  background-color: #cccccc;
+  border: 1px solid #000000;
 }
