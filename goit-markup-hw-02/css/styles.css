@@ -19,7 +19,13 @@ img {
 button {
   cursor: pointer;
 }
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 .main {
+  flex-grow: 1;
   padding: 0 0 94px;
 }
 .container {
