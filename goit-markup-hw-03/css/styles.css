@@ -1,16 +1,28 @@
-html {
-  box-sizing: border-box;
+@keyframes logo-appear {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateY(0);
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
 }
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+:root {
+  --brandColor: #2196f3;
 }
 body {
   font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 14px;
   color: #757575;
   width: 1600px;
-/* WRAPPER */
+  /* WRAPPER */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,7 +30,7 @@ body {
 img {
   display: block;
   max-width: 100%;
-  height: auto; 
+  height: auto;
 }
 button {
   cursor: pointer;
@@ -28,7 +40,7 @@ button {
   padding: 0 0 94px;
 }
 .container {
-  width: 1200px;
+  width: 1170px;
   margin: 0 auto;
 }
 /* header */
@@ -39,6 +51,7 @@ button {
   min-height: 80px;
 }
 .logo {
+  margin-right: 94px;
   color: #000000;
   text-decoration: none;
   font-family: "Raleway";
@@ -46,11 +59,21 @@ button {
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
+  transition: transform 0.2s linear;
+  animation: logo-appear 1s linear;
+}
+.logo:hover,
+.logo:focus {
+  transform: scale(1.2);
 }
 .brand-color {
-  color: #2196f3;
+  color: var(--brandColor);
 }
-
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .nav-list {
   list-style: none;
   padding: 0;
@@ -58,41 +81,70 @@ button {
   display: flex;
 }
 .nav-list-item:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 50px;
 }
-.nav-list-item a {
+.nav-link {
+  position: relative;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1.15;
   letter-spacing: 0.02em;
   color: #212121;
+  transition: color 0.2s linear;
 }
-.nav-list-item a:hover,
-.nav-list-item a:focus {
-  color: #2196f3;
+.header-contacts-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.header-contacts {
+.header-contacts-item:not(:last-child) {
+  margin-right: 50px;
+}
+.header-contacts-link {
+  position: relative;
   text-decoration: none;
+  font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1.15;
   letter-spacing: 0.02em;
   color: #757575;
+  transition: color 0.2s linear;
 }
-.header-contacts:not(:last-child) {
-  margin-right: 20px;
+.nav-list-item a:hover,
+.nav-list-item a:focus,
+.header-contacts-link:hover,
+.header-contacts-link:focus {
+  color: var(--brandColor);
 }
-.header-contacts:hover,
-.header-contacts:focus {
-  color: #2196f3;
+.nav-link::after,
+.header-contacts-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  margin-top: 10px;
+  width: 0;
+  height: 2px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--brandColor);
+  transition: width 0.2s linear;
+}
+.nav-link:hover::after,
+.nav-link:focus::after,
+.header-contacts-link:hover::after,
+.header-contacts-link:focus::after {
+  width: 100%;
 }
 
 /* SECTION TOP */
 .section {
   text-align: center;
   width: 1200px;
-  padding: 40px 0 ;
+  padding: 40px 0;
 }
 .top {
   width: 1600px;
@@ -120,7 +172,7 @@ h1 {
 .buy-service-button {
   min-width: 200px;
   height: 50px;
-  background: #2196f3;
+  background: var(--brandColor);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
@@ -138,7 +190,7 @@ h1 {
 .buy-service-button:hover,
 .buy-service-button:focus {
   background: #ffffff;
-  color: #2196f3;
+  color: var(--brandColor);
 }
 
 /* FEATURES SECTION */
@@ -287,7 +339,7 @@ h1 {
 .filter-button:hover,
 .filter-button:focus {
   color: #ffffff;
-  background-color: #2196f3;
+  background-color: var(--brandColor);
   cursor: pointer;
 }
 
@@ -348,8 +400,8 @@ h1 {
 }
 /* vissualy-hidden helper */
 .vissualy-hidden:not(:focus):not(:active),
-input[type='checkbox'].vissualy-hidden,
-input[type='ratio'].vissualy-hidden {
+input[type="checkbox"].vissualy-hidden,
+input[type="ratio"].vissualy-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
