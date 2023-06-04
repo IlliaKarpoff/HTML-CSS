@@ -163,7 +163,6 @@ button {
 
 /* TOP SECTION */
 .top {
-  background-color: #2f303a;
   background-image: linear-gradient(to top, 
                     rgba(47, 48, 58, 0.4), 
                     rgba(47, 48, 58, 0.4)), 
@@ -171,8 +170,6 @@ button {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* background-color: rgba(47, 48, 58, 0.4); */
-  /* background: #C4C4C4; */
 }
 .top > div {
   display: flex;
@@ -403,6 +400,12 @@ h1 {
   background-color: #2f303a;
   padding: 60px 0;
 }
+.flexbox {
+  display: flex;
+}
+.footer-contacts {
+  margin-right: 70px;
+}
 .footer .logo {
   display: inline-block;
   margin: 0 0 20px;
@@ -422,6 +425,28 @@ h1 {
 .address a {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+}
+.footer-socials {
+  padding-top: 8px;
+}
+.join {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.social-links-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer .social-links-item:focus,
+.footer .social-links-item:hover {
+  background-color: var(--brandColor);
 }
 
 /* PORTFOLIO */
