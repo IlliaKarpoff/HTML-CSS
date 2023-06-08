@@ -19,6 +19,12 @@
   </head>
 
   <body>
+    <div class="modal-bcg is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-btn" data-modal-close></button>
+      </div>
+    </div>
+
     <header class="header">
       <div class="container">
         <nav class="nav">
@@ -59,7 +65,7 @@
     <main class="main">
       <section class="section top">
         <div class="container">
-          <button class="buy-service-button" type="button">
+          <button class="buy-service-button" data-modal-open type="button">
             Замовити послугу
           </button>
           <h1>Ефективні рішення <br />для вашого бізнесу</h1>
