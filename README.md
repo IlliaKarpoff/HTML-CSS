@@ -20,3 +20,7 @@ https://illiakarpoff.github.io/HTML-CSS/goit-markup-hw-04/
 Hometask #5
 Make HTML markup+css for the homework #5 page layout.                 
 https://illiakarpoff.github.io/HTML-CSS/goit-markup-hw-05/
+
+Hometask #6
+Make HTML markup+css for the homework #6 page layout.                 
+https://illiakarpoff.github.io/HTML-CSS/goit-markup-hw-06/
