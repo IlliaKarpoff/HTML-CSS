@@ -439,10 +439,13 @@ h1 {
   height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* background-position: center;
+  background-repeat: no-repeat; */
 }
-.clients-list-item:nth-child(1) {
+.icon {
+  display: inline-block;
+}
+/* .clients-list-item:nth-child(1) {
   background-image: url(../../images/icons/group1.svg);
 }
 .clients-list-item:nth-child(2) {
@@ -459,7 +462,7 @@ h1 {
 }
 .clients-list-item:nth-child(6) {
   background-image: url(../../images/icons/group6.svg);
-}
+} */
 
 /* FOOTER */
 .footer {
