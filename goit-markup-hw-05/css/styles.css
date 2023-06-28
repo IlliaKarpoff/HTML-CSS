@@ -442,8 +442,17 @@ h1 {
   /* background-position: center;
   background-repeat: no-repeat; */
 }
-.icon {
+body{
+  background-color: teal;
+}
+.clients .icon {
   display: inline-block;
+
+  fill: #000999;
+  cursor: pointer;
+}
+.icon:hover {
+  fill: var(--brandColor);
 }
 /* .clients-list-item:nth-child(1) {
   background-image: url(../../images/icons/group1.svg);
