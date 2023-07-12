@@ -75,8 +75,8 @@ button {
   /* scale: 1; */
   position: relative;
   margin: auto;
+  padding: 40px;
   width: 528px;
-  height: 580px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -95,7 +95,71 @@ button {
   background-image: url(../../images/icons/close-x.svg);
   background-repeat: no-repeat;
   background-position: center;
+  fill: #000000;
 }
+.close-btn:hover,
+.close-btn:focus {
+  fill: var(--brandColor);
+}
+.modal__title {
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+.form {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+.form a {
+  color: var(--brandColor);
+}
+.form__label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+.form__input {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2)
+}
+.form__textarea {
+  margin-bottom: 20px;
+  height: 120px;
+}
+.form__checkboxarea {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.form__button {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  background: rgba(33, 150, 243, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border: 0;
+}
+
+
+
 
 /* header */
 .header {

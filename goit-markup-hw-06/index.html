@@ -21,6 +21,30 @@
     <div class="modal-bcg is-hidden" data-modal>
       <div class="modal">
         <button class="close-btn" data-modal-close></button>
+        <h4 class="modal__title">Залиште свої дані, ми вам зателефонуємо</h4>
+        <form action="" class="form">
+          <label for="name" class="form__label">Name</label>
+          <input id="name" type="text" class="form__input" />
+            <label for="phone" class="form__label">phone</label>
+            <input id="phone" type="text" class="form__input" />
+            <label for="email" class="form__label">email</label>
+            <input id="email" type="text" class="form__input" />
+            <label for="comment" class="form__label">comment</label>
+            <textarea
+              name="comment"
+              id=""
+              cols="30"
+              rows="10"
+              class="form__input form__textarea"
+              placeholder="Введіть текст"
+              ></textarea>
+              <div class="form__checkboxarea">
+                <input type="checkbox" id="" /><span>
+                  Погоджуюсь на розсилку та приймаю <a href="#">Умови договору</a>
+                </span>
+              </div>
+          <button class="button form__button">Відправити</button>
+        </form>
       </div>
     </div>
 
