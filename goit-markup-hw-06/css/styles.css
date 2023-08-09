@@ -24,6 +24,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  /* overflow: hidden; */
 }
 img {
   display: block;
@@ -44,6 +45,14 @@ ol {
   list-style: none;
 }
 button {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 1);
+  background-color: var(--brandColor);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
 .main {
@@ -84,21 +93,24 @@ button {
   z-index: 1;
 }
 .close-btn {
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
   width: 30px;
   height: 30px;
+  position: absolute;
   right: 8px;
   top: 8px;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  background-image: url(../../images/icons/close-x.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  box-shadow: none;
   fill: #000000;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-btn:hover,
-.close-btn:focus {
+.close-btn:hover .close-icon,
+.close-btn:focus .close-icon {
   fill: var(--brandColor);
 }
 .modal__title {
@@ -126,40 +138,72 @@ button {
   line-height: 14px;
   letter-spacing: 0.01em;
   text-align: left;
+  position: relative;
 }
 .form__input {
   margin-bottom: 10px;
+  padding: 11px 40px;
   width: 100%;
   height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2)
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form__input-icon {
+  display: block;
+  fill: #000000;
+  position: absolute;
+  top: 18px;
+  margin: 11px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form__input:focus {
+  border-color: var(--brandColor);
+}
+.form__input:focus + .form__input-icon {
+  fill: var(--brandColor);
 }
 .form__textarea {
   margin-bottom: 20px;
+  padding: 12px 16px;
   height: 120px;
+  resize: none;
 }
-.form__checkboxarea {
+.form__check-terms {
   margin-bottom: 30px;
   text-align: center;
+  vertical-align: middle;
+}
+.form__check-terms_label::before {
+  display: inline-block;
+  content: "";
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+  background-image: url(../../images/icons/square.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+}
+.form__check-terms_input:checked + .form__check-terms_label::before {
+  background-image: url(../../images/icons/icon-check.svg);
 }
 .form__button {
-  display: block;
-  margin: 0 auto;
   width: 200px;
   height: 50px;
-  border-radius: 4px;
   font-size: 16px;
   font-weight: 700;
   line-height: 30px;
   letter-spacing: 0.06em;
-  text-align: center;
-  color: rgba(255, 255, 255, 1);
-  background: rgba(33, 150, 243, 1);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  border: 0;
+  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
-
+.form__button:focus,
+.form__button:hover {
+  scale: 1.1;
+}
 
 /* header */
 .header {
@@ -311,18 +355,12 @@ h1 {
 .buy-service-button {
   min-width: 200px;
   height: 50px;
-  border: 0;
-  background-color: var(--brandColor);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  cursor: pointer;
   padding: 10px 32px;
 
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  color: #ffffff;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -601,14 +639,11 @@ h1 {
 }
 .filter-button {
   height: 38px;
-  border-radius: 4px;
   padding: 6px 22px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
-  text-align: center;
-  border: none;
   color: #212121;
   background-color: #f5f4fa;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -703,7 +738,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
